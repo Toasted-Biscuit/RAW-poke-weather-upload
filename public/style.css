@@ -1,0 +1,313 @@
+/* this file is loaded by index.html and styles that page */
+
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.backgroundImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/*
+  Home Page -------------------------------------
+*/
+
+/* Home Weather Stuff */
+
+.overlayText {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 3px black;
+}
+
+#homeWeatherText {
+  top: 10%;
+}
+
+#tempHome {
+  top: 16%;
+  font-size: 40px;
+}
+
+#weatherHome {
+  top: 25%;
+}
+
+#highLowHome {
+  top: 30%;
+}
+
+/* Home Pokemon Stuff */
+
+.overlayBox {
+  position: absolute;
+  display: flex;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 33%;
+  border-radius: 25px;
+  background-color: rgba(255,255,255,0.85);
+}
+
+#homeBoxText {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#homePokeName {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  padding-top: 45px;
+}
+
+#homePokeImg{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
+  
+}
+
+/* 
+  Pokemon Page ---------------------------------------
+*/
+
+#pokeName {
+  text-align: left;
+  margin-right: 5px;
+}
+
+#pokeId {
+  margin-top: 27px;
+  color: grey;
+}
+
+#typeContainer {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#pokeTypeSingle {
+  height: 40px;
+  width: auto;
+  margin: auto;
+}
+
+#pokeType1 {
+  height: 40px;
+  width: auto;
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+#pokeType2 {
+  height: 40px;
+  width: auto;
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+#pokeImg {
+  display: block;
+  margin: auto;
+  height: 200px;
+  width: auto;
+}
+
+#pokeShinyImg {
+  display: block;
+  margin: auto;
+  height: 200px;
+  width: auto;
+}
+
+#shinyCheckContainer {
+  display: flex;
+  margin-top: 10px;
+}
+
+#shinyCheck {
+  margin-left: auto;
+}
+
+#shinyCheckLabel {
+  margin-right: auto;
+}
+
+#pokeDesc {
+  text-align: center;
+}
+
+#randPokeButton {
+  margin-left: auto;
+  margin-right: 6px;
+}
+
+#searchbox {
+  margin-left: 6px;
+  margin-right: 2px;
+}
+
+#searchButton {
+  margin-left: 2px;
+  margin-right: auto;
+}
+
+/*
+  Weather Page -------------------------------------
+*/
+
+#tempWeather {
+  top: 8%;
+  font-size: 40px;
+}
+
+#weatherWeather {
+  top: 15%;
+}
+
+#highLowWeather {
+  top: 20%;
+}
+
+#forcastContainer {
+  top: 57%;
+  left: 50%;
+  width: 90%;
+  height: 47%;
+  display: flex;
+  flex-direction: column;
+}
+
+.forcastInfoContainer {
+  display: flex;
+  margin-top: 5px;
+  margin-left: 25px;
+  margin-right: 25px;
+/*   margin-bottom: 0px; */
+}
+
+.forcastDayName {
+  margin-right: 15px;
+  font-weight: bold;
+  margin-bottom: auto;
+}
+
+.forcastEmoji {
+  font-size: 30px;
+  margin-top: 4px;
+  margin-right: 10px;
+  margin-bottom: auto;
+}
+
+.forcastWeather {
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.forcastHigh {
+  float: left;
+  margin-right: 10px;
+/*   margin-left: 35px; */
+  margin-bottom: auto;
+}
+
+.forcastLow {
+  float: left;
+  margin-right: 0px;
+  margin-bottom: auto;
+}
+
+/*
+  Navigation Buttons -----------------------------------
+*/
+
+.navButtonRight {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 34%;
+  height: 11%;
+  float: left;
+  cursor: pointer;
+  border: 2px solid #57cc99;
+  background-color: #80ed99;
+  text-align: center;
+}
+
+.navButtonRight:hover {
+  background-color: #57cc99;
+}
+
+.navButtonMiddle {
+  position: fixed;
+  bottom: 0;
+  left: 33%;
+  width: 34%;
+  height: 11%;
+  float: left;
+  cursor: pointer;
+  border: 2px solid #57cc99;
+  background-color: #80ed99;
+  text-align: center;
+}
+
+.navButtonMiddle:hover {
+  background-color: #57cc99;
+}
+
+.navButtonLeft {
+  position: fixed;
+  bottom: 0;
+  left: 66%;
+  width: 34%;
+  height: 11%;
+  float: left;
+  cursor: pointer;
+  border: 2px solid #57cc99;
+  background-color: #80ed99;
+  text-align: center;
+}
+
+.navButtonLeft:hover {
+  background-color: #57cc99;
+}
+
+#homeButtonImg {
+  margin: auto;
+  width: 45px;
+  height: 45px;
+}
+
+#pokemonButtonImg {
+  margin: auto;
+  width: 60px;
+  height: 60px;
+}
+
+#weatherButtonImg {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+}

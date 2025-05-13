@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Assistant</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    
+    <! Home Page ------------------>
+    <div id="home_page" style="display:inline">
+      <img class="backgroundImg" id="homeBackgroundImg">
+      <h3 class="overlayText" id="homeWeatherText">Today's Weather!</h3>
+      <h1 class="overlayText" id="tempHome"></h1>
+      <h2 class="overlayText" id="weatherHome"></h2>
+      <h2 class="overlayText" id="highLowHome"></h2>
+      <div class="overlayBox">
+        <p id="homeBoxText">Your daily Pokemon!!!</p>
+        <br>
+        <p id="homePokeName"></p>
+        <img id="homePokeImg">
+      </div>
+    </div>
+    
+    <! Pokemon Page ------------>
+    <!Name and Id>
+    <div id="pokemon_page" style="display:none">
+      <div style="display:flex">
+        <h2 class="pokeText" id="pokeName"></h2>
+        <p class="pokeText" id="pokeId"></p>
+      </div>
+      
+      <!Type Icons>
+      <div id="typeContainer">
+        <img class="typeIcon" id="pokeType1">
+        <img class="typeIcon" id="pokeType2">
+        <img class="typeIcon" id="pokeTypeSingle">
+      </div>
+      
+      <!Pokemon Images and shiny check>
+      <img id="pokeImg">
+      <img id="pokeShinyImg">
+      <div id="shinyCheckContainer">
+        <input id="shinyCheck" type="checkbox" onchange="turnShiny()">
+        <label id="shinyCheckLabel" for="shinyCheck">Shiny?</label>
+      </div>
+
+      
+      <!Description>
+      <p class="pokeText" id="pokeDesc">Description</p>
+      
+      <!Search and random buttons>
+      <div id="pokeInteractContainer" style="display: flex">
+        <button id="randPokeButton" onclick="getRandPokemon()">Random Pokemon</button>
+        <input id="searchbox" onsearch="searchPokemon()" type="search" placeholder="Search...">
+        <button id="searchButton" onclick="searchPokemon()">Search</button>
+      </div>
+    </div>
+    
+    <! Weather Page --------------->
+    <div id="weather_page" style="display:none">
+      <img class="backgroundImg" id="weatherBackgroundImg">
+      <h1 class="overlayText" id="tempWeather"></h1>
+      <h2 class="overlayText" id="weatherWeather"></h2>
+      <h2 class="overlayText" id="highLowWeather"></h2>
+      
+      <div class="overlayBox" id="forcastContainer">
+        <div class="forcastInfoContainer">
+          <p class="forcastDayName" id="forcastDayName0"></p>
+          <p class="forcastEmoji" id="forcastEmoji0"></p>
+          <p class="forcastWeather" id="forcastWeather0"></p>
+          <p class="forcastHigh" id="forcastHigh0"></p>
+          <p class="forcastLow" id="forcastLow0"></p>
+        </div>
+        
+        <div class="forcastInfoContainer">
+          <p class="forcastDayName" id="forcastDayName1"></p>
+          <p class="forcastEmoji" id="forcastEmoji1"></p>
+          <p class="forcastWeather" id="forcastWeather1"></p>
+          <p class="forcastHigh" id="forcastHigh1"></p>
+          <p class="forcastLow" id="forcastLow1"></p>
+        </div>
+        
+        <div class="forcastInfoContainer">
+          <p class="forcastDayName" id="forcastDayName2"></p>
+          <p class="forcastEmoji" id="forcastEmoji2"></p>
+          <p class="forcastWeather" id="forcastWeather2"></p>
+          <p class="forcastHigh" id="forcastHigh2"></p>
+          <p class="forcastLow" id="forcastLow2"></p>
+        </div>
+        
+        <div class="forcastInfoContainer">
+          <p class="forcastDayName" id="forcastDayName3"></p>
+          <p class="forcastEmoji" id="forcastEmoji3"></p>
+          <p class="forcastWeather" id="forcastWeather3"></p>
+          <p class="forcastHigh" id="forcastHigh3"></p>
+          <p class="forcastLow" id="forcastLow3"></p>
+        </div>
+        
+        <div class="forcastInfoContainer">
+          <p class="forcastDayName" id="forcastDayName4"></p>
+          <p class="forcastEmoji" id="forcastEmoji4"></p>
+          <p class="forcastWeather" id="forcastWeather4"></p>
+          <p class="forcastHigh" id="forcastHigh4"></p>
+          <p class="forcastLow" id="forcastLow4"></p>
+        </div>
+        
+        <div class="forcastInfoContainer">
+          <p class="forcastDayName" id="forcastDayName5"></p>
+          <p class="forcastEmoji" id="forcastEmoji5"></p>
+          <p class="forcastWeather" id="forcastWeather5"></p>
+          <p class="forcastHigh" id="forcastHigh5"></p>
+          <p class="forcastLow" id="forcastLow5"></p>
+        </div>
+      </div>
+    </div>
+    
+    <! Navbuttons ------------>
+    <div>
+      <button class="navButtonRight" onclick="homePressed()">
+        <img id="homeButtonImg" src="https://cdn.glitch.global/1c5a9760-0baf-4dae-9ae3-eefc5cfcfd0a/home_icon.svg?v=1746732941852">
+      </button>
+      <button class="navButtonMiddle" onclick="pokemonPressed()">
+        <img id="pokemonButtonImg" src="https://cdn.glitch.global/1c5a9760-0baf-4dae-9ae3-eefc5cfcfd0a/pokemon_icon.svg?v=1746732996408">
+      </button>
+      <button class="navButtonLeft" onclick="weatherPressed()">
+        <img id="weatherButtonImg" src="https://cdn.glitch.global/1c5a9760-0baf-4dae-9ae3-eefc5cfcfd0a/weather_icon.svg?v=1746732932435">
+      </button>
+    </div>
+  </body>
+</html>
